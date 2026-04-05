@@ -1192,11 +1192,13 @@
 		btn.textContent = "Mengirim...";
 
 		// Send to Formspree
-		fetch("https://formspree.io/f/xykbbolo", {
-			method: "POST",
-			body: formData,
-			mode: "no-cors",
-		})
+		fetch(
+			"https://script.google.com/macros/s/AKfycbwKDOxg_5MJoChYMQf9nwXI2Jc1viseWogwmMlHE9Zvqc91KfFnHqc_pQziubQc5XOHmQ/exec",
+			{
+				method: "POST",
+				body: formData,
+			},
+		)
 			.then(() => {
 				// With no-cors mode, assume success if fetch completes
 				// Use a small delay to ensure Formspree receives it
